@@ -8,8 +8,10 @@ import {
   MapPin,
   ChevronRight,
   Check,
+  Loader,
 } from "lucide-react";
 import { openWhatsApp } from "@/lib/whatsapp";
+import { toast } from "sonner";
 
 export default function Index() {
   const [bookingData, setBookingData] = useState({
@@ -19,6 +21,7 @@ export default function Index() {
     serviceType: "washing",
     pickupDate: "",
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleBookingChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>,
@@ -27,14 +30,43 @@ export default function Index() {
     setBookingData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleBookingSubmit = (e: React.FormEvent) => {
+  const handleBookingSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    const message = `Hello! I'd like to book a ${bookingData.serviceType} service.
-Name: ${bookingData.name}
-Phone: ${bookingData.phone}
-Address: ${bookingData.address}
-Preferred Pickup Date: ${bookingData.pickupDate}`;
-    openWhatsApp(message);
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch("/api/booking", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(bookingData),
+      });
+
+      const data = await response.json() as {
+        success?: boolean;
+        message?: string;
+        error?: string;
+      };
+
+      if (data.success) {
+        toast.success(data.message || "Booking received successfully!");
+        setBookingData({
+          name: "",
+          phone: "",
+          address: "",
+          serviceType: "washing",
+          pickupDate: "",
+        });
+      } else {
+        toast.error(data.message || "Failed to process booking");
+      }
+    } catch (error) {
+      toast.error("Error submitting booking. Please try again.");
+      console.error("Booking error:", error);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const services = [
