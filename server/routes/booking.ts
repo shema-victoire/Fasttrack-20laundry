@@ -17,7 +17,7 @@ interface BookingResponse {
 
 export const handleBooking: RequestHandler = async (
   req,
-  res
+  res,
 ): Promise<void> => {
   try {
     const { name, phone, address, serviceType, pickupDate } =
@@ -64,7 +64,7 @@ export const handleBooking: RequestHandler = async (
           To: `whatsapp:${ownerPhone}`,
           Body: bookingMessage,
         }).toString(),
-      }
+      },
     );
 
     if (!response.ok) {
@@ -78,7 +78,7 @@ export const handleBooking: RequestHandler = async (
       return;
     }
 
-    const data = await response.json() as { sid?: string };
+    const data = (await response.json()) as { sid?: string };
     const bookingId = data.sid || `BOOKING-${Date.now()}`;
 
     res.json({

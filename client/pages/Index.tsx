@@ -43,7 +43,7 @@ export default function Index() {
         body: JSON.stringify(bookingData),
       });
 
-      const data = await response.json() as {
+      const data = (await response.json()) as {
         success?: boolean;
         message?: string;
         error?: string;
@@ -207,7 +207,8 @@ export default function Index() {
                   Book Your Pickup
                 </h2>
                 <p className="text-xl text-muted-foreground">
-                  Schedule fast laundry pickup in 3 clicks - 4-hour turnaround guaranteed
+                  Schedule fast laundry pickup in 3 clicks - 4-hour turnaround
+                  guaranteed
                 </p>
               </div>
 
@@ -323,7 +324,8 @@ export default function Index() {
                 Our Services
               </h2>
               <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-                Washing, dry cleaning, pressing, and specialized laundry solutions
+                Washing, dry cleaning, pressing, and specialized laundry
+                solutions
               </p>
             </div>
 
@@ -395,8 +397,8 @@ export default function Index() {
               Experience Fast Track Laundry
             </h2>
             <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-              Fast, reliable laundry service in Kigali. 4-hour turnaround, expert care,
-              free pickup and delivery.
+              Fast, reliable laundry service in Kigali. 4-hour turnaround,
+              expert care, free pickup and delivery.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
