@@ -22,17 +22,21 @@ Before starting, ensure you have the following installed:
 To enable WhatsApp booking notifications, you'll need a Twilio account.
 
 ### 1.1 Create a Twilio Account
+
 1. Visit [twilio.com](https://www.twilio.com/)
 2. Sign up for a free account (includes $15 trial credit)
 3. Verify your phone number
 
 ### 1.2 Get WhatsApp Credentials
+
 1. In Twilio Dashboard, go to **Phone Numbers** → **Manage** → **Active Numbers**
 2. Look for your WhatsApp-enabled number (e.g., +14155238886)
 3. Copy your **Account SID** and **Auth Token** from the main Dashboard
 
 ### 1.3 Note Down Your Details
+
 You'll need these for the `.env` file:
+
 - Account SID
 - Auth Token
 - Twilio WhatsApp Phone Number
@@ -43,12 +47,14 @@ You'll need these for the `.env` file:
 ## 📁 Step 2: Clone & Install Project
 
 ### 2.1 Clone the Repository
+
 ```bash
 git clone https://github.com/shema-victoire/Fasttrack-20laundry.git
 cd Fasttrack-20laundry
 ```
 
 ### 2.2 Install Dependencies
+
 ```bash
 pnpm install
 ```
@@ -60,6 +66,7 @@ This will install all required packages (React, Express, TailwindCSS, etc.)
 ## ⚙️ Step 3: Configure Environment Variables
 
 ### 3.1 Create `.env` File
+
 In the project root directory, create a file named `.env`:
 
 ```bash
@@ -83,11 +90,13 @@ PING_MESSAGE=pong
 ```
 
 **⚠️ IMPORTANT:**
+
 - Replace the credentials with your actual Twilio credentials
 - Keep your `.env` file private - never commit it to GitHub
 - The `.env` file is listed in `.gitignore` to prevent accidental commits
 
 ### 3.2 File Structure After Setup
+
 ```
 Fasttrack-20laundry/
 ├── .env                    (← Create this file)
@@ -120,16 +129,19 @@ Fasttrack-20laundry/
 ## 🚀 Step 4: Run the Project
 
 ### 4.1 Start Development Server
+
 ```bash
 pnpm dev
 ```
 
 This will:
+
 - Start the Vite development server (frontend)
 - Start the Express backend server
 - Open the app at `http://localhost:8080`
 
 ### 4.2 Access the Application
+
 - **Homepage:** http://localhost:8080
 - **Services:** http://localhost:8080/services
 - **Contact:** http://localhost:8080/contact
@@ -139,6 +151,7 @@ This will:
 ## ✅ Step 5: Test the Booking System
 
 ### 5.1 Test Booking Form
+
 1. Go to homepage (http://localhost:8080)
 2. Scroll to "Book Your Pickup" section
 3. Fill in the form:
@@ -151,6 +164,7 @@ This will:
 5. You should receive a WhatsApp message at the owner's number (+250792370021)
 
 ### 5.2 Expected WhatsApp Message
+
 ```
 🚀 NEW BOOKING FROM LAUNDRYPRO
 
@@ -190,6 +204,7 @@ pnpm format.fix
 ## 📁 Project Structure & Key Files
 
 ### Frontend Files
+
 - **`client/pages/Index.tsx`** - Homepage with booking form
 - **`client/pages/Services.tsx`** - Services listing page
 - **`client/pages/Contact.tsx`** - Contact information page
@@ -200,12 +215,14 @@ pnpm format.fix
 - **`client/global.css`** - Tailwind CSS & theme colors
 
 ### Backend Files
+
 - **`server/index.ts`** - Express server configuration
 - **`server/routes/booking.ts`** - ✨ **Booking endpoint** (handles form submissions and sends WhatsApp)
   - Receives: name, phone, address, serviceType, pickupDate
   - Sends: WhatsApp message to owner via Twilio
 
 ### Configuration Files
+
 - **`tailwind.config.ts`** - Tailwind CSS theme configuration
 - **`tsconfig.json`** - TypeScript configuration
 - **`vite.config.ts`** - Vite frontend build configuration
@@ -237,16 +254,21 @@ pnpm format.fix
 ## 🐛 Troubleshooting
 
 ### Issue: "pnpm: command not found"
+
 **Solution:** Install pnpm globally:
+
 ```bash
 npm install -g pnpm
 ```
 
 ### Issue: Port 8080 already in use
+
 **Solution:** The app will try the next available port. Check the console for the actual URL.
 
 ### Issue: Not receiving WhatsApp messages
+
 **Checklist:**
+
 - [ ] Twilio Account SID and Auth Token are correct in `.env`
 - [ ] Twilio WhatsApp phone number is correct in `.env`
 - [ ] Owner WhatsApp phone number is correct in `.env`
@@ -254,7 +276,9 @@ npm install -g pnpm
 - [ ] Check browser console for form submission errors
 
 ### Issue: "Missing environment variables"
+
 **Solution:** Make sure your `.env` file has all required variables:
+
 ```bash
 TWILIO_ACCOUNT_SID=...
 TWILIO_AUTH_TOKEN=...
@@ -279,18 +303,21 @@ OWNER_WHATSAPP_PHONE=...
 To deploy this project:
 
 ### Option 1: Netlify (Recommended)
+
 1. Push code to GitHub
 2. Connect repo to Netlify
 3. Set environment variables in Netlify dashboard
 4. Deploy automatically on push
 
 ### Option 2: Vercel
+
 1. Push code to GitHub
 2. Import project on Vercel
 3. Set environment variables
 4. Deploy automatically
 
 ### Option 3: Docker / VPS
+
 1. Build the project: `pnpm build`
 2. Run with: `pnpm start`
 3. Set environment variables on your server
@@ -300,6 +327,7 @@ To deploy this project:
 ## 📞 Support
 
 For issues or questions:
+
 - Check the troubleshooting section above
 - Visit [Twilio Docs](https://www.twilio.com/docs/whatsapp)
 - Check [Vite Docs](https://vitejs.dev)
