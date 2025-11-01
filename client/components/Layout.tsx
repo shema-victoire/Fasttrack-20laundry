@@ -7,7 +7,7 @@ interface LayoutProps {
 }
 
 export default function Layout({ children }: LayoutProps) {
-  const whatsappPhone = "250784123456";
+  const whatsappPhone = "250794939367";
   const whatsappMessage = encodeURIComponent(
     "Hello! I'd like to book a laundry service. Can you help me?",
   );
@@ -22,7 +22,7 @@ export default function Layout({ children }: LayoutProps) {
                 <Droplet className="w-6 h-6 text-white" />
               </div>
               <span className="font-bold text-xl hidden sm:inline bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-                LaundryPro
+                Fast Track
               </span>
             </Link>
 
@@ -93,10 +93,10 @@ export default function Layout({ children }: LayoutProps) {
                 <div className="w-8 h-8 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center">
                   <Droplet className="w-5 h-5 text-white" />
                 </div>
-                <span className="font-bold text-lg">LaundryPro</span>
+                <span className="font-bold text-lg">Fast Track Laundry</span>
               </div>
               <p className="text-sm text-muted-foreground">
-                Professional laundry services for Kigali, Rwanda.
+                Fast, reliable laundry services in Kigali - 4-hour turnaround.
               </p>
             </div>
 
@@ -150,9 +150,10 @@ export default function Layout({ children }: LayoutProps) {
             <div>
               <h4 className="font-semibold mb-4">Contact</h4>
               <ul className="space-y-2 text-sm text-muted-foreground">
-                <li>📞 +250 784 123 456</li>
-                <li>✉️ info@laundrypro.rw</li>
-                <li>📍 Kigali, Rwanda</li>
+                <li>📞 +250 794 939 367</li>
+                <li>✉️ fasttracklaundry.2024@gmail.com</li>
+                <li>📍 Kimironko, Kigali</li>
+                <li>⏰ 7:00 AM - 10:00 PM Daily</li>
               </ul>
             </div>
           </div>
@@ -160,8 +161,8 @@ export default function Layout({ children }: LayoutProps) {
           <div className="border-t border-border pt-8">
             <div className="flex flex-col md:flex-row justify-between items-center">
               <p className="text-sm text-muted-foreground">
-                © 2024 LaundryPro. All rights reserved.
-              </p>
+              © 2024 Fast Track Laundry. All rights reserved.
+            </p>
               <div className="flex gap-4 mt-4 md:mt-0">
                 <a
                   href="#"
