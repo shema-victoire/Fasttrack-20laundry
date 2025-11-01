@@ -94,8 +94,8 @@ export default function Services() {
                 Our Services
               </h1>
               <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-                Complete laundry solutions tailored to your needs. From everyday
-                washing to specialized care, we have you covered.
+                Fast Track Laundry offers comprehensive laundry solutions with 4-hour turnaround.
+                Professional care for all your laundry needs.
               </p>
             </div>
           </div>
