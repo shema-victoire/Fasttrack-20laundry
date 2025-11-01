@@ -135,7 +135,7 @@ export default function Services() {
                     <button
                       onClick={() =>
                         openWhatsApp(
-                          `I'm interested in your ${service.title} service. Can you provide more information?`
+                          `I'm interested in your ${service.title} service. Can you provide more information?`,
                         )
                       }
                       className="w-full px-4 py-2 border border-primary text-primary rounded-lg font-semibold hover:bg-primary/5 transition-all"
@@ -158,7 +158,7 @@ export default function Services() {
             <button
               onClick={() =>
                 openWhatsApp(
-                  "Hi! I'd like to book a laundry service. Can you help me?"
+                  "Hi! I'd like to book a laundry service. Can you help me?",
                 )
               }
               className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-primary rounded-xl font-semibold hover:shadow-xl transition-all"

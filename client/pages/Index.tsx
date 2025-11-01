@@ -21,7 +21,7 @@ export default function Index() {
   });
 
   const handleBookingChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>,
   ) => {
     const { name, value } = e.target;
     setBookingData((prev) => ({ ...prev, [name]: value }));
@@ -41,7 +41,8 @@ Preferred Pickup Date: ${bookingData.pickupDate}`;
     {
       icon: Droplets,
       title: "Washing",
-      description: "Professional washing with premium detergents for all fabric types",
+      description:
+        "Professional washing with premium detergents for all fabric types",
       color: "from-blue-500 to-cyan-500",
     },
     {
@@ -95,11 +96,16 @@ Preferred Pickup Date: ${bookingData.pickupDate}`;
                   </span>
                 </div>
                 <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6">
-                  Fresh, Clean <span className="text-gradient bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Clothes</span> Delivered
+                  Fresh, Clean{" "}
+                  <span className="text-gradient bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                    Clothes
+                  </span>{" "}
+                  Delivered
                 </h1>
                 <p className="text-xl text-muted-foreground mb-8 max-w-2xl">
                   Experience premium laundry service in Kigali. Book your pickup
-                  in 3 clicks, and we'll handle the rest with care and precision.
+                  in 3 clicks, and we'll handle the rest with care and
+                  precision.
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-4">
@@ -116,7 +122,7 @@ Preferred Pickup Date: ${bookingData.pickupDate}`;
                   <button
                     onClick={() =>
                       openWhatsApp(
-                        "Hi! I'm interested in learning more about your services."
+                        "Hi! I'm interested in learning more about your services.",
                       )
                     }
                     className="inline-flex items-center justify-center gap-2 px-8 py-4 border-2 border-primary text-primary rounded-xl font-semibold hover:bg-primary/5 transition-all"
@@ -263,7 +269,8 @@ Preferred Pickup Date: ${bookingData.pickupDate}`;
                 </form>
 
                 <p className="text-sm text-muted-foreground text-center mt-6">
-                  We'll confirm your booking and arrange the pickup time via WhatsApp
+                  We'll confirm your booking and arrange the pickup time via
+                  WhatsApp
                 </p>
               </div>
             </div>
@@ -299,7 +306,9 @@ Preferred Pickup Date: ${bookingData.pickupDate}`;
                       >
                         <Icon className="w-7 h-7 text-white" />
                       </div>
-                      <h3 className="text-2xl font-bold mb-2">{service.title}</h3>
+                      <h3 className="text-2xl font-bold mb-2">
+                        {service.title}
+                      </h3>
                       <p className="text-muted-foreground mb-6">
                         {service.description}
                       </p>
@@ -331,7 +340,9 @@ Preferred Pickup Date: ${bookingData.pickupDate}`;
                       <Icon className="w-8 h-8 text-primary" />
                     </div>
                     <h3 className="text-xl font-bold mb-2">{feature.title}</h3>
-                    <p className="text-muted-foreground">{feature.description}</p>
+                    <p className="text-muted-foreground">
+                      {feature.description}
+                    </p>
                   </div>
                 );
               })}
@@ -346,8 +357,8 @@ Preferred Pickup Date: ${bookingData.pickupDate}`;
               Ready to Experience Premium Laundry Service?
             </h2>
             <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-              Join hundreds of satisfied customers in Kigali who trust LaundryPro
-              for their laundry needs.
+              Join hundreds of satisfied customers in Kigali who trust
+              LaundryPro for their laundry needs.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -364,7 +375,7 @@ Preferred Pickup Date: ${bookingData.pickupDate}`;
               <button
                 onClick={() =>
                   openWhatsApp(
-                    "Hi LaundryPro! I'd like to know more about your services."
+                    "Hi LaundryPro! I'd like to know more about your services.",
                   )
                 }
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 border-2 border-white text-white rounded-xl font-semibold hover:bg-white/10 transition-all"

@@ -42,7 +42,9 @@ export default function Contact() {
 
           <div className="container mx-auto px-4 relative z-10">
             <div className="text-center">
-              <h1 className="text-5xl md:text-6xl font-bold mb-6">Contact Us</h1>
+              <h1 className="text-5xl md:text-6xl font-bold mb-6">
+                Contact Us
+              </h1>
               <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
                 Have questions? We'd love to hear from you. Get in touch with us
                 via WhatsApp, phone, or email.
@@ -74,19 +76,17 @@ export default function Contact() {
 
             {/* CTA */}
             <div className="bg-gradient-to-r from-primary/10 to-secondary/10 rounded-2xl p-12 text-center border border-primary/20">
-              <h2 className="text-3xl font-bold mb-4">
-                Ready to Get Started?
-              </h2>
+              <h2 className="text-3xl font-bold mb-4">Ready to Get Started?</h2>
               <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-                The fastest way to book your laundry service is through WhatsApp.
-                We'll respond within minutes!
+                The fastest way to book your laundry service is through
+                WhatsApp. We'll respond within minutes!
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button
                   onClick={() =>
                     openWhatsApp(
-                      "Hi LaundryPro! I'd like to book a laundry service."
+                      "Hi LaundryPro! I'd like to book a laundry service.",
                     )
                   }
                   className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-primary to-secondary text-white rounded-xl font-semibold hover:shadow-lg hover:shadow-primary/25 transition-all"
