@@ -94,18 +94,18 @@ export default function Index() {
   const features = [
     {
       icon: Clock,
-      title: "Fast & Reliable",
-      description: "Same-day delivery available in select areas",
+      title: "4-Hour Turnaround",
+      description: "Pick up & delivery within 4 hours in Kigali area",
     },
     {
       icon: MapPin,
       title: "Free Pickup & Delivery",
-      description: "We come to you, anywhere in Kigali",
+      description: "Door-to-door service anywhere in Kigali",
     },
     {
       icon: Droplets,
-      title: "Quality Assured",
-      description: "100% satisfaction guaranteed on all services",
+      title: "Professional Care",
+      description: "Expert handling for all fabric types",
     },
   ];
 
@@ -128,16 +128,14 @@ export default function Index() {
                   </span>
                 </div>
                 <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6">
-                  Fresh, Clean{" "}
+                  Laundry Done{" "}
                   <span className="text-gradient bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-                    Clothes
-                  </span>{" "}
-                  Delivered
+                    Fast & Fresh
+                  </span>
                 </h1>
                 <p className="text-xl text-muted-foreground mb-8 max-w-2xl">
-                  Experience premium laundry service in Kigali. Book your pickup
-                  in 3 clicks, and we'll handle the rest with care and
-                  precision.
+                  Fast Track Laundry - Your trusted laundry partner in Kigali.
+                  Pick up & delivery within 4 hours. Book now in 3 clicks!
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-4">
@@ -177,10 +175,10 @@ export default function Index() {
                   <div className="relative bg-gradient-to-br from-primary/10 to-secondary/10 backdrop-blur rounded-3xl p-8 border border-primary/20">
                     <div className="grid grid-cols-2 gap-4">
                       {[
-                        "🧺 Professional Washing",
-                        "🌬️ Express Dry Cleaning",
-                        "👔 Premium Pressing",
-                        "📦 Free Pickup & Delivery",
+                        "🧺 Washing & Ironing",
+                        "🌬️ Dry Cleaning",
+                        "👔 Expert Pressing",
+                        "📦 4-Hour Turnaround",
                       ].map((item, i) => (
                         <div key={i} className="flex items-center gap-2">
                           <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center">
@@ -209,7 +207,7 @@ export default function Index() {
                   Book Your Pickup
                 </h2>
                 <p className="text-xl text-muted-foreground">
-                  Schedule a laundry pickup in just 3 clicks
+                  Schedule fast laundry pickup in 3 clicks - 4-hour turnaround guaranteed
                 </p>
               </div>
 
@@ -325,7 +323,7 @@ export default function Index() {
                 Our Services
               </h2>
               <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-                Premium laundry care for every need
+                Washing, dry cleaning, pressing, and specialized laundry solutions
               </p>
             </div>
 
@@ -353,7 +351,7 @@ export default function Index() {
                         {service.description}
                       </p>
                       <a
-                        href={`https://wa.me/250784123456?text=I'm%20interested%20in%20${service.title}%20service`}
+                        href={`https://wa.me/250794939367?text=I'm%20interested%20in%20${service.title}%20service`}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center gap-2 text-primary font-semibold group-hover:gap-3 transition-all"
