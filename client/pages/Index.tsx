@@ -392,11 +392,11 @@ export default function Index() {
         <section className="py-12 md:py-20 bg-gradient-to-r from-primary via-primary/90 to-secondary">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Ready to Experience Premium Laundry Service?
+              Experience Fast Track Laundry
             </h2>
             <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-              Join hundreds of satisfied customers in Kigali who trust
-              LaundryPro for their laundry needs.
+              Fast, reliable laundry service in Kigali. 4-hour turnaround, expert care,
+              free pickup and delivery.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
